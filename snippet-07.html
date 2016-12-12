@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>Clipping and Masking in CSS - Snippet 07</title>
+
+        <style>
+            body {
+                text-align: center;
+            }
+
+            .container {
+                margin: 2em auto;
+                padding: 4em;
+                background-color: #e0e2e6;
+                width: 50%;
+                border: 10px dotted rgba(0, 0, 0, .5);
+            }
+
+            #border-box { background-clip: border-box; }
+
+            #padding-box { background-clip: padding-box; }
+
+            #content-box { background-clip: content-box; }
+
+            #text h1 {
+                -webkit-background-clip: text;
+                background-clip: text;
+                background-image: url(images/img-2.jpg);
+                font-size: 100px;
+                color: rgba(0, 0, 0, 0);
+            }
+
+            .container#text {
+                border: 1px solid #ccc;
+                background: #fff;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="container" id="border-box">
+            <code>background-clip: border-box;</code>
+            <p>
+                Border-box will allow the background to extend beneath the border.
+            </p>
+        </div>
+
+        <div class="container" id="padding-box">
+            <code>background-clip: padding-box;</code>
+            <p>
+                Padding-box will allow the background to extend to the inside edges of the border.
+            </p>
+        </div>
+
+        <div class="container" id="content-box">
+            <code>background-clip: content-box;</code>
+            <p>
+                Content-box will clip the background to the edges of the content so it disregards any margin or padding you might have.
+            </p>
+        </div>
+
+        <div class="container" id="text">
+            <code>background-clip: text;</code>
+            <h1>
+                The background is clipped to or is painted within the text.
+            </h1>
+        </div>
+    </body>
+</html>

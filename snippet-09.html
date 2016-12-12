@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>Clipping and Masking in CSS - Snippet 09</title>
+
+        <style>
+            img {
+                max-width: 90%;
+                height: auto;
+
+                mask: url(#masking);
+            }
+        </style>
+    </head>
+    <body>
+        <img src="images/img-5.jpg" alt="Image" />
+
+        <svg class="svg-defs">
+          <defs>
+                <mask id="masking" maskUnits="objectBoundingBox" maskContentUnits="objectBoundingBox">
+                  <circle cx=".5" cy=".5" r=".5" fill="white" />
+                  <circle cx=".5" cy=".5" r=".45" fill="gray" />
+                  <circle cx=".5" cy=".5" r=".35" fill="black" />
+                </mask>
+           </defs>
+        </svg>
+
+    </body>
+</html>

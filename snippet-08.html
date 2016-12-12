@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>Clipping and Masking in CSS - Snippet 08</title>
+
+        <style>
+            body {
+                text-align: center;
+            }
+
+            img {
+                max-width: 90%;
+                height: auto;
+
+                -webkit-mask: url(images/mask-1.jpg) luminance;
+                mask: url(images/mask-1.jpg) luminance;
+                -webkit-mask: url(images/mask-2.png) center center no-repeat;
+                mask: url(images/mask-2.png) center center no-repeat;
+            }
+        </style>
+    </head>
+    <body>
+        <img src="images/img-2.jpg" alt="Image" />
+    </body>
+</html>

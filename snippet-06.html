@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>Clipping and Masking in CSS - Snippet 06</title>
+
+        <style>
+            img {
+                max-width: 90%;
+                height: auto;
+            }
+
+            body {
+                background: #26262f;
+                text-align: center;
+            }
+
+            #test-img-1 {
+                -webkit-clip-path: polygon(20% 0%, 60% 0%, 100% 20%, 100% 60%, 60% 100%, 20% 100%, 0% 60%, 0% 20%);
+            }
+
+                #test-img-1:hover {
+                    -webkit-animation: odo 1s infinite;
+                }
+
+            @-webkit-keyframes odo {
+                0% {
+                    -webkit-clip-path: polygon(20% 0%, 60% 0%, 100% 20%, 100% 60%, 60% 100%, 20% 100%, 0% 60%, 0% 20%);
+                }
+                50% {
+                    -webkit-clip-path: polygon(30% 0%, 70% 0%, 100% 30%, 100% 70%, 70% 100%, 30% 100%, 0% 70%, 0% 30%);
+                }
+                100% {
+                    -webkit-clip-path: polygon(20% 0%, 60% 0%, 100% 20%, 100% 60%, 60% 100%, 20% 100%, 0% 60%, 0% 20%);
+                }
+            }
+        </style>
+    </head>
+    <body>
+        <img src="images/img-4.jpg" id="test-img-1" alt="Image" />
+    </body>
+</html>

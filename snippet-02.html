@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>Clipping and Masking in CSS - Snippet 02</title>
+
+        <style>
+            img {
+                max-width: 90%;
+                height: auto;
+            }
+
+            body {
+                background: #26262f;
+                text-align: center;
+            }
+
+            #test-img-1 {
+                /*-webkit-clip-path: inset(100px);*/
+                -webkit-clip-path: inset(100px 200px 100px 200px);
+            }
+
+            #test-img-2 {
+                -webkit-clip-path: circle(260px at center);
+            }
+
+            #test-img-3 {
+                -webkit-clip-path: ellipse(160px 340px at center);
+            }
+
+            #test-img-4 {
+                -webkit-clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%);
+            }
+        </style>
+    </head>
+    <body>
+        <img src="images/img-1.jpg" id="test-img-1" alt="Image" />
+        <img src="images/img-2.jpg" id="test-img-2" alt="Image" />
+        <img src="images/img-3.jpg" id="test-img-3" alt="Image" />
+        <img src="images/img-4.jpg" id="test-img-4" alt="Image" />
+    </body>
+</html>

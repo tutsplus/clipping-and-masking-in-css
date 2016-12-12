@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>Clipping and Masking in CSS - Snippet 01</title>
+
+        <style>
+            img {
+                max-width: 90%;
+                height: auto;
+            }
+
+            #test-img {
+                position: absolute;
+                clip: rect(0, 500px, 500px, 0);
+            }
+        </style>
+    </head>
+    <body>
+        <img src="images/img-1.jpg" id="test-img" alt="Image" />
+    </body>
+</html>
